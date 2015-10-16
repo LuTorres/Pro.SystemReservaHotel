@@ -756,7 +756,21 @@ txtPrecioDiario.transferFocus();
     }//GEN-LAST:event_btnGuardar1ActionPerformed
 
     private void TablaListadoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TablaListadoMouseClicked
-        
+    btnGuardar.setText("Editar ");
+    habilitar();
+    btnEliminar.setEnabled(true);
+    accion = "editar";
+    
+    int fila = TablaListado.rowAtPoint(evt.getPoint());
+    
+ txtIdHabitacion.setText(TablaListado.getValueAt(fila, 0).toString() );
+ txtNumero.setText(TablaListado.getValueAt(fila, 1).toString() );
+ cboPiso.setSelectedItem(TablaListado.getValueAt(fila, 2).toString() );
+ txtDescripcion.setText(TablaListado.getValueAt(fila, 3).toString() );
+ txtCaracteristica.setText(TablaListado.getValueAt(fila, 4).toString() );
+ txtPrecioDiario.setText(TablaListado.getValueAt(fila, 5).toString() );
+ cboEstado.setSelectedItem(TablaListado.getValueAt(fila, 6).toString() );
+ cboTipoHabitaciones.setSelectedItem(TablaListado.getValueAt(fila, 7).toString() );
     }//GEN-LAST:event_TablaListadoMouseClicked
 
     /**
