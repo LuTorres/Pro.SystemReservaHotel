@@ -14,7 +14,7 @@ import javax.swing.JOptionPane;
  * @author Luis Torres Patiño
  */
 public class Conexion {
-    public String db="BaseReserva";
+    public String db="basereserva";
     public String url="jdbc:mysql://127.0.0.1" + db; 
     public String user="root";
     public String pass="";
