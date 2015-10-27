@@ -91,13 +91,15 @@ public class Fcliente {
 
             pst2.setString(1, dts.getCodigo_Cliente());
 
+             int n = pst.executeUpdate();
 
-            int n = pst.executeUpdate();
-            if (n != 0) {
-                 int n2 = pst2.executeUpdate();
+                if (n != 0) {
+                int n2 = pst2.executeUpdate();
                 if (n2 != 0) {
                     return true;
-
+                
+            
+            
                 } else {
                     return false; 
 
