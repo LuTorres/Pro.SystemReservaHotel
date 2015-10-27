@@ -13,7 +13,7 @@ import javax.swing.table.DefaultTableModel;
  *
  * @author Luis Torres Patiño
  */
-public class Frmcliente extends javax.swing.JFrame {
+public class Frmcliente extends javax.swing.JInternalFrame {
 
     /**
      * Creates new form Experimento
@@ -146,7 +146,10 @@ public class Frmcliente extends javax.swing.JFrame {
         btnSalir = new javax.swing.JButton();
         lblTotalRegistros = new javax.swing.JLabel();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setClosable(true);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setMaximizable(true);
+        setVisible(true);
 
         jPanel1.setBackground(new java.awt.Color(255, 204, 51));
         jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder("Registro De Clientes"));
@@ -441,7 +444,7 @@ public class Frmcliente extends javax.swing.JFrame {
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGap(31, 31, 31)
                         .addComponent(btnSalir)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(15, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());

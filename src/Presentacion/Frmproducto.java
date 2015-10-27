@@ -14,7 +14,7 @@ import javax.swing.table.DefaultTableModel;
  *
  * @author Luis Torres Patiño
  */ 
-public class Frmproducto extends javax.swing.JFrame {
+public class Frmproducto extends javax.swing.JInternalFrame {
 
     /**
      * Creates new form Frmproducto

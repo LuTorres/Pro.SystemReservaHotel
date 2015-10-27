@@ -75,6 +75,11 @@ public class Frminicio extends javax.swing.JFrame {
         copyMenuItem.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Files/1445935326_product-sales-report.png"))); // NOI18N
         copyMenuItem.setMnemonic('y');
         copyMenuItem.setText("Producto");
+        copyMenuItem.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                copyMenuItemActionPerformed(evt);
+            }
+        });
         mnuarchivo.add(copyMenuItem);
 
         menuBar.add(mnuarchivo);
@@ -93,6 +98,11 @@ public class Frminicio extends javax.swing.JFrame {
         aboutMenuItem.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Files/1445936062_clients.png"))); // NOI18N
         aboutMenuItem.setMnemonic('a');
         aboutMenuItem.setText("Clientes");
+        aboutMenuItem.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                aboutMenuItemActionPerformed(evt);
+            }
+        });
         mnureserva.add(aboutMenuItem);
 
         jMenuItem1.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_G, java.awt.event.InputEvent.CTRL_MASK));
@@ -112,6 +122,11 @@ public class Frminicio extends javax.swing.JFrame {
         jMenuItem2.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_U, java.awt.event.InputEvent.CTRL_MASK));
         jMenuItem2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Files/1445936393_supportmale.png"))); // NOI18N
         jMenuItem2.setText("Usuarios y Accesos");
+        jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem2ActionPerformed(evt);
+            }
+        });
         mnuconfiguraciones.add(jMenuItem2);
 
         menuBar.add(mnuconfiguraciones);
@@ -135,6 +150,11 @@ public class Frminicio extends javax.swing.JFrame {
 
         mnusalir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Files/salir-de-mi-perfil-icono-3964-32.png"))); // NOI18N
         mnusalir.setText("Salir");
+        mnusalir.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                mnusalirMouseClicked(evt);
+            }
+        });
         menuBar.add(mnusalir);
 
         setJMenuBar(menuBar);
@@ -157,9 +177,38 @@ public class Frminicio extends javax.swing.JFrame {
         ForHabitacion form = new ForHabitacion();
         Escritorio.add(form);
         form.toFront();
-        form.setVisible(true);
+        form.setVisible(true );
                 
     }//GEN-LAST:event_cutMenuItemActionPerformed
+
+    private void copyMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_copyMenuItemActionPerformed
+        // TODO add your handling code here
+         Frmproducto form = new Frmproducto();
+        Escritorio.add(form);
+        form.toFront();
+        form.setVisible(true );
+    }//GEN-LAST:event_copyMenuItemActionPerformed
+
+    private void aboutMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_aboutMenuItemActionPerformed
+        // TODO add your handling code here:
+         Frmcliente form = new Frmcliente();
+        Escritorio.add(form);
+        form.toFront();
+        form.setVisible(true );
+    }//GEN-LAST:event_aboutMenuItemActionPerformed
+
+    private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
+        // TODO add your handling code here:
+         Frmtrabajador form = new Frmtrabajador();
+        Escritorio.add(form);
+        form.toFront();
+        form.setVisible(true );
+    }//GEN-LAST:event_jMenuItem2ActionPerformed
+
+    private void mnusalirMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_mnusalirMouseClicked
+        // TODO add your handling code here:
+        this.dispose();
+    }//GEN-LAST:event_mnusalirMouseClicked
 
     /**
      * @param args the command line arguments
