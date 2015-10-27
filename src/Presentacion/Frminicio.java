@@ -15,6 +15,8 @@ public class Frminicio extends javax.swing.JFrame {
      */
     public Frminicio() {
         initComponents();
+        this.setExtendedState(Frminicio.MAXIMIZED_BOTH);
+        this.setTitle(" SISTEMA DE RESERVA DE HABITACIONES Y GESTION DE VENTAS - HOTEL BUENOS AIRES");
     }
 
     /**
@@ -26,95 +28,114 @@ public class Frminicio extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        desktopPane = new javax.swing.JDesktopPane();
+        Escritorio = new javax.swing.JDesktopPane();
         menuBar = new javax.swing.JMenuBar();
         mnusisreserva = new javax.swing.JMenu();
-        editMenu = new javax.swing.JMenu();
+        mnuarchivo = new javax.swing.JMenu();
         cutMenuItem = new javax.swing.JMenuItem();
         copyMenuItem = new javax.swing.JMenuItem();
-        helpMenu = new javax.swing.JMenu();
+        mnureserva = new javax.swing.JMenu();
         contentMenuItem = new javax.swing.JMenuItem();
         aboutMenuItem = new javax.swing.JMenuItem();
         jMenuItem1 = new javax.swing.JMenuItem();
-        jMenu1 = new javax.swing.JMenu();
-        jMenu2 = new javax.swing.JMenu();
+        mnuconsultas = new javax.swing.JMenu();
+        mnuconfiguraciones = new javax.swing.JMenu();
         jMenuItem2 = new javax.swing.JMenuItem();
-        jMenu3 = new javax.swing.JMenu();
-        jMenu4 = new javax.swing.JMenu();
+        mnuherramientas = new javax.swing.JMenu();
+        mnuayudas = new javax.swing.JMenu();
         jMenuItem3 = new javax.swing.JMenuItem();
         jMenuItem4 = new javax.swing.JMenuItem();
-        jMenu5 = new javax.swing.JMenu();
+        mnusalir = new javax.swing.JMenu();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        desktopPane.setBackground(new java.awt.Color(102, 255, 255));
+        Escritorio.setBackground(new java.awt.Color(102, 255, 255));
 
         mnusisreserva.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Files/el-informe-del-usuario-icono-9444-32.png"))); // NOI18N
         mnusisreserva.setMnemonic('f');
         mnusisreserva.setText("Sisreserva");
         menuBar.add(mnusisreserva);
 
-        editMenu.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Files/1445901399_add-files-to-archive.png"))); // NOI18N
-        editMenu.setMnemonic('e');
-        editMenu.setText("Archivo");
+        mnuarchivo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Files/1445901399_add-files-to-archive.png"))); // NOI18N
+        mnuarchivo.setMnemonic('e');
+        mnuarchivo.setText("Archivo");
 
+        cutMenuItem.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_H, java.awt.event.InputEvent.CTRL_MASK));
+        cutMenuItem.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Files/casa-de-ladrillos-icono-8864-32.png"))); // NOI18N
         cutMenuItem.setMnemonic('t');
         cutMenuItem.setText("Habitaciones");
-        editMenu.add(cutMenuItem);
+        cutMenuItem.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cutMenuItemActionPerformed(evt);
+            }
+        });
+        mnuarchivo.add(cutMenuItem);
 
+        copyMenuItem.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_P, java.awt.event.InputEvent.CTRL_MASK));
+        copyMenuItem.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Files/1445935326_product-sales-report.png"))); // NOI18N
         copyMenuItem.setMnemonic('y');
         copyMenuItem.setText("Producto");
-        editMenu.add(copyMenuItem);
+        mnuarchivo.add(copyMenuItem);
 
-        menuBar.add(editMenu);
+        menuBar.add(mnuarchivo);
 
-        helpMenu.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Files/la-gente-de-negocios-de-usuario-icono-4645-32.png"))); // NOI18N
-        helpMenu.setMnemonic('h');
-        helpMenu.setText("Reservas");
+        mnureserva.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Files/la-gente-de-negocios-de-usuario-icono-4645-32.png"))); // NOI18N
+        mnureserva.setMnemonic('h');
+        mnureserva.setText("Reservas");
 
+        contentMenuItem.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_R, java.awt.event.InputEvent.CTRL_MASK));
+        contentMenuItem.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Files/1445935934_phone.png"))); // NOI18N
         contentMenuItem.setMnemonic('c');
         contentMenuItem.setText("Reserva y Consumos");
-        helpMenu.add(contentMenuItem);
+        mnureserva.add(contentMenuItem);
 
+        aboutMenuItem.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_C, java.awt.event.InputEvent.CTRL_MASK));
+        aboutMenuItem.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Files/1445936062_clients.png"))); // NOI18N
         aboutMenuItem.setMnemonic('a');
         aboutMenuItem.setText("Clientes");
-        helpMenu.add(aboutMenuItem);
+        mnureserva.add(aboutMenuItem);
 
+        jMenuItem1.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_G, java.awt.event.InputEvent.CTRL_MASK));
+        jMenuItem1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Files/1445936184_08.Credit-Card.png"))); // NOI18N
         jMenuItem1.setText("Pagos");
-        helpMenu.add(jMenuItem1);
+        mnureserva.add(jMenuItem1);
 
-        menuBar.add(helpMenu);
+        menuBar.add(mnureserva);
 
-        jMenu1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Files/xmag-icono-5512-32.png"))); // NOI18N
-        jMenu1.setText("Consultas");
-        menuBar.add(jMenu1);
+        mnuconsultas.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Files/xmag-icono-5512-32.png"))); // NOI18N
+        mnuconsultas.setText("Consultas");
+        menuBar.add(mnuconsultas);
 
-        jMenu2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Files/tx-netstatus-icono-8755-32.png"))); // NOI18N
-        jMenu2.setText("Configuraciones");
+        mnuconfiguraciones.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Files/tx-netstatus-icono-8755-32.png"))); // NOI18N
+        mnuconfiguraciones.setText("Configuraciones");
 
+        jMenuItem2.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_U, java.awt.event.InputEvent.CTRL_MASK));
+        jMenuItem2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Files/1445936393_supportmale.png"))); // NOI18N
         jMenuItem2.setText("Usuarios y Accesos");
-        jMenu2.add(jMenuItem2);
+        mnuconfiguraciones.add(jMenuItem2);
 
-        menuBar.add(jMenu2);
+        menuBar.add(mnuconfiguraciones);
 
-        jMenu3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Files/fs-y-la-carga-icono-9414-32.png"))); // NOI18N
-        jMenu3.setText("Herramientas");
-        menuBar.add(jMenu3);
+        mnuherramientas.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Files/1445935522_automatic.png"))); // NOI18N
+        mnuherramientas.setText("Herramientas");
+        menuBar.add(mnuherramientas);
 
-        jMenu4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Files/de-alta-seguridad-icono-4781-32.png"))); // NOI18N
-        jMenu4.setText("Ayuda");
+        mnuayudas.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Files/de-alta-seguridad-icono-4781-32.png"))); // NOI18N
+        mnuayudas.setText("Ayuda");
 
+        jMenuItem3.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_A, java.awt.event.InputEvent.CTRL_MASK));
         jMenuItem3.setText("Acerca de ....");
-        jMenu4.add(jMenuItem3);
+        mnuayudas.add(jMenuItem3);
 
+        jMenuItem4.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_H, java.awt.event.InputEvent.CTRL_MASK));
         jMenuItem4.setText("Ayuda");
-        jMenu4.add(jMenuItem4);
+        mnuayudas.add(jMenuItem4);
 
-        menuBar.add(jMenu4);
+        menuBar.add(mnuayudas);
 
-        jMenu5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Files/salir-de-mi-perfil-icono-3964-32.png"))); // NOI18N
-        jMenu5.setText("Salir");
-        menuBar.add(jMenu5);
+        mnusalir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Files/salir-de-mi-perfil-icono-3964-32.png"))); // NOI18N
+        mnusalir.setText("Salir");
+        menuBar.add(mnusalir);
 
         setJMenuBar(menuBar);
 
@@ -122,15 +143,23 @@ public class Frminicio extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(desktopPane, javax.swing.GroupLayout.DEFAULT_SIZE, 759, Short.MAX_VALUE)
+            .addComponent(Escritorio, javax.swing.GroupLayout.DEFAULT_SIZE, 785, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(desktopPane, javax.swing.GroupLayout.DEFAULT_SIZE, 480, Short.MAX_VALUE)
+            .addComponent(Escritorio, javax.swing.GroupLayout.DEFAULT_SIZE, 480, Short.MAX_VALUE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void cutMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cutMenuItemActionPerformed
+        ForHabitacion form = new ForHabitacion();
+        Escritorio.add(form);
+        form.toFront();
+        form.setVisible(true);
+                
+    }//GEN-LAST:event_cutMenuItemActionPerformed
 
     /**
      * @param args the command line arguments
@@ -167,23 +196,23 @@ public class Frminicio extends javax.swing.JFrame {
         });
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JDesktopPane Escritorio;
     private javax.swing.JMenuItem aboutMenuItem;
     private javax.swing.JMenuItem contentMenuItem;
     private javax.swing.JMenuItem copyMenuItem;
     private javax.swing.JMenuItem cutMenuItem;
-    private javax.swing.JDesktopPane desktopPane;
-    private javax.swing.JMenu editMenu;
-    private javax.swing.JMenu helpMenu;
-    private javax.swing.JMenu jMenu1;
-    private javax.swing.JMenu jMenu2;
-    private javax.swing.JMenu jMenu3;
-    private javax.swing.JMenu jMenu4;
-    private javax.swing.JMenu jMenu5;
     private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JMenuItem jMenuItem3;
     private javax.swing.JMenuItem jMenuItem4;
     private javax.swing.JMenuBar menuBar;
+    private javax.swing.JMenu mnuarchivo;
+    private javax.swing.JMenu mnuayudas;
+    private javax.swing.JMenu mnuconfiguraciones;
+    private javax.swing.JMenu mnuconsultas;
+    private javax.swing.JMenu mnuherramientas;
+    private javax.swing.JMenu mnureserva;
+    private javax.swing.JMenu mnusalir;
     private javax.swing.JMenu mnusisreserva;
     // End of variables declaration//GEN-END:variables
 }

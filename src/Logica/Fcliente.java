@@ -37,8 +37,7 @@ public class Fcliente {
 
         sSQL = "select p.IdPersona, p.Nombre, p.Apellidos, p.Tipo_Documento, p.Num_Documento"
                 + "p.Direccion, p.Telefono, p.Email, c.Codigo_Cliente from persona inner join cliente c "
-                + "on p.IdPersona=c.IdPersona where Num_Documento like ¨  '% "
-                + Buscar + " %'order by IdPersona desc ";
+                + "on p.IdPersona=c.IdPersona where Num_Documento like  '%" + Buscar + "%' order by IdPersona desc ";
 
         try {
 
@@ -68,7 +67,7 @@ public class Fcliente {
 
     }
 
-    public boolean insertar(Vcliente dts, int n2) {
+    public boolean insertar(Vcliente dts) {
         sSQL = "insert into persona(Nombre,Apellidos,Tipo_Documento,Num_Documento,Direccion,Telefono,Email )"
                 + "values (?,?,?,?,?,?,?)";
 
@@ -198,9 +197,5 @@ public class Fcliente {
             JOptionPane.showConfirmDialog(null, e);
         }
         return false;
-    }
-
-    public boolean insertar(Vcliente dts) {
-        throw new UnsupportedOperationException("Not yet implemented");
     }
 }

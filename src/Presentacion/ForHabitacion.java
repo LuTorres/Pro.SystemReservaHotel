@@ -485,7 +485,7 @@ public class ForHabitacion extends javax.swing.JFrame {
         dts.setPiso((String) cboPiso.getItemAt(Seleccionado));
         
         dts.setDescripcion(txtDescripcion.getText());
-        dts.setCaracteristica(txtCaracteristica.getText());
+        dts.setCaracteristicas(txtCaracteristica.getText());
         
         dts.setPrecio_Diario(Double.parseDouble(txtPrecioDiario.getText()));
         

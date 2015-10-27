@@ -37,7 +37,7 @@ public class Fproducto {
         TotalRegistro=0;
         Modelo = new DefaultTableModel(null, titulos);
         
-        sSQL = "select * from producto where Nombre like ¨  '% " + Buscar + " %'order by IdProducto desc ";
+        sSQL = "select * from producto where Nombre like'%" + Buscar + "%' order by IdProducto desc ";
           
            
          try {

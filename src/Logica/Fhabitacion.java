@@ -25,14 +25,14 @@ public class Fhabitacion {
          DefaultTableModel Modelo;
       
         
-        String[]titulos = {"ID","Numero","Piso","Descripcion","Caracteristica","Precio","Estado","Tipo_Habitacion"};
+        String[]titulos = {"ID","Numero","Piso","Descripcion","Caracteristicas","Precio","Estado","Tipo_Habitacion"};
          
         String [] Registro = new String [8];
         
         TotalRegistro=0;
         Modelo = new DefaultTableModel(null, titulos);
         
-        sSQL = "select * from habitacion where Piso like ¨  '% " + Buscar + " %'order by IdHabitacion";
+        sSQL = "select * from habitacion where Piso like  '%" + Buscar + "%' order by IdHabitacion";
           
            
          try {
@@ -45,7 +45,7 @@ public class Fhabitacion {
                  Registro [1]=rs.getString("Numero");
                  Registro [2]=rs.getString("Piso");
                  Registro [3]=rs.getString("Descripcion");
-                 Registro [4]=rs.getString("Caracteristica");
+                 Registro [4]=rs.getString("Caracteristicas");
                  Registro [5]=rs.getString("Precio_Diario");
                  Registro [6]=rs.getString("Estado");
                  Registro [7]=rs.getString("Tipo_Habitacion");
@@ -70,7 +70,7 @@ public class Fhabitacion {
              pst.setString( 1, dts.getNumero());
              pst.setString( 2, dts.getPiso());
              pst.setString( 3, dts.getDescripcion());
-             pst.setString( 4, dts.getCaracteristica());
+             pst.setString( 4, dts.getCaracteristicas());
              pst.setDouble( 5, dts.getPrecio_Diario());
              pst.setString( 6, dts.getEstado());
              pst.setString( 7, dts.getTipo_Habitacion());
@@ -91,7 +91,7 @@ public class Fhabitacion {
      }
      
       public boolean editar (Vhabitacion dts){
-         sSQL=" update Habitacion set Numero=?,Piso=?,Descripcion=?,Caracteristica=?Precio_Habitacion=?,Estado=?,Tipo_Habitacion=?"+
+         sSQL=" update Habitacion set Numero=?,Piso=?,Descripcion=?,Caracteristicas=?Precio_Habitacion=?,Estado=?,Tipo_Habitacion=?"+
           " where IdHabitacion=?";           
                  
           try {
@@ -99,7 +99,7 @@ public class Fhabitacion {
              pst.setString( 1, dts.getNumero());
              pst.setString( 2, dts.getPiso());
              pst.setString( 3, dts.getDescripcion());
-             pst.setString( 4, dts.getCaracteristica());
+             pst.setString( 4, dts.getCaracteristicas());
              pst.setDouble( 5, dts.getPrecio_Diario());
              pst.setString( 6, dts.getEstado());
              pst.setString( 7, dts.getTipo_Habitacion());

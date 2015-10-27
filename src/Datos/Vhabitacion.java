@@ -13,17 +13,17 @@ public class Vhabitacion {
     private String Numero;
     private String Piso;
     private String Descripcion;
-    private String Caracteristica;
+    private String Caracteristicas;
     private Double Precio_Diario;
     private String Estado;
     private String Tipo_Habitacion;
 
-    public Vhabitacion(int IdHabhitacion, String Numero, String Piso, String Descripcion, String Caracteristica, String Estado, String Tipo_Habitacion) {
+    public Vhabitacion(int IdHabhitacion, String Numero, String Piso, String Descripcion, String Caracteristicas, String Estado, String Tipo_Habitacion) {
         this.IdHabhitacion = IdHabhitacion;
         this.Numero = Numero;
         this.Piso = Piso;
         this.Descripcion = Descripcion;
-        this.Caracteristica = Caracteristica;
+        this.Caracteristicas = Caracteristicas;
         this.Estado = Estado;
         this.Tipo_Habitacion = Tipo_Habitacion;
     }
@@ -63,12 +63,12 @@ public class Vhabitacion {
         this.Descripcion = Descripcion;
     }
 
-    public String getCaracteristica() {
-        return Caracteristica;
+    public String getCaracteristicas() {
+        return Caracteristicas;
     }
 
-    public void setCaracteristica(String Caracteristica) {
-        this.Caracteristica = Caracteristica;
+    public void setCaracteristicas(String Caracteristica) {
+        this.Caracteristicas = Caracteristicas;
     }
 
     public Double getPrecio_Diario() {
