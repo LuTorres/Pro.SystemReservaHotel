@@ -29,6 +29,10 @@ public class Frminicio extends javax.swing.JFrame {
     private void initComponents() {
 
         Escritorio = new javax.swing.JDesktopPane();
+        lblIdPersona = new javax.swing.JLabel();
+        lblNombre = new javax.swing.JLabel();
+        lblApellidos = new javax.swing.JLabel();
+        lblAcceso = new javax.swing.JLabel();
         menuBar = new javax.swing.JMenuBar();
         mnusisreserva = new javax.swing.JMenu();
         mnuarchivo = new javax.swing.JMenu();
@@ -50,6 +54,26 @@ public class Frminicio extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         Escritorio.setBackground(new java.awt.Color(102, 255, 255));
+
+        lblIdPersona.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
+        lblIdPersona.setText("jLabel1");
+        lblIdPersona.setBounds(30, 20, 70, 16);
+        Escritorio.add(lblIdPersona, javax.swing.JLayeredPane.DEFAULT_LAYER);
+
+        lblNombre.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
+        lblNombre.setText("jLabel2");
+        lblNombre.setBounds(30, 50, 70, 16);
+        Escritorio.add(lblNombre, javax.swing.JLayeredPane.DEFAULT_LAYER);
+
+        lblApellidos.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
+        lblApellidos.setText("jLabel3");
+        lblApellidos.setBounds(30, 80, 70, 16);
+        Escritorio.add(lblApellidos, javax.swing.JLayeredPane.DEFAULT_LAYER);
+
+        lblAcceso.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
+        lblAcceso.setText("jLabel4");
+        lblAcceso.setBounds(30, 110, 70, 16);
+        Escritorio.add(lblAcceso, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         mnusisreserva.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Files/el-informe-del-usuario-icono-9444-32.png"))); // NOI18N
         mnusisreserva.setMnemonic('f');
@@ -254,10 +278,14 @@ public class Frminicio extends javax.swing.JFrame {
     private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JMenuItem jMenuItem3;
     private javax.swing.JMenuItem jMenuItem4;
+    public static javax.swing.JLabel lblAcceso;
+    public static javax.swing.JLabel lblApellidos;
+    public static javax.swing.JLabel lblIdPersona;
+    public static javax.swing.JLabel lblNombre;
     private javax.swing.JMenuBar menuBar;
-    private javax.swing.JMenu mnuarchivo;
+    public static javax.swing.JMenu mnuarchivo;
     private javax.swing.JMenu mnuayudas;
-    private javax.swing.JMenu mnuconfiguraciones;
+    public static javax.swing.JMenu mnuconfiguraciones;
     private javax.swing.JMenu mnuconsultas;
     private javax.swing.JMenu mnuherramientas;
     private javax.swing.JMenu mnureserva;

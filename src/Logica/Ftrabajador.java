@@ -35,7 +35,7 @@ public class Ftrabajador {
 
         TotalRegistro = 0;
         Modelo = new DefaultTableModel(null, titulos);
-
+ 
         sSQL = "select p.IdPersona, p.Nombre, p.Apellidos, p.Tipo_Documento, p.Num_Documento"
                 + "p.Direccion, p.Telefono, p.Email, t.Sueldo, t.Acceso, t.Login, t.Password, t.Estado from persona inner join trabajador t "
                 + "on p.IdPersona=t.IdPersona where Num_Documento like '%" + Buscar + "%' order by IdPersona desc ";
@@ -210,5 +210,49 @@ public class Ftrabajador {
         return false;
     }
 
+    
+    
+    
+    public DefaultTableModel  Login (String Login, String Password) {
+        DefaultTableModel Modelo;
+
+        String[] titulos = {"ID", "Nombre", "Apellidos","Acceso","Login","Clave","Estado"};
+
+        String[] Registro = new String[7];
+
+        TotalRegistro = 0;
+        Modelo = new DefaultTableModel(null, titulos);
+ 
+        sSQL = "select p.IdPersona, p.Nombre, p.Apellidos,t.Acceso, t.Login, t.Password, t.Estado from persona inner join trabajador t "
+                + "on p.IdPersona=t.IdPersona where t.Login= '"
+                + Login + "' and t.Password '" + Password + "' and t.Estado='A'";
+
+        try {
+
+            Statement st = cn.createStatement();
+            ResultSet rs = st.executeQuery(sSQL);
+
+            while (rs.next()) {
+                Registro[0] = rs.getString("IdPersona");
+                Registro[1] = rs.getString("Nombre");
+                Registro[2] = rs.getString("Apellidos");
+                
+                Registro[3] = rs.getString("Acceso");
+                Registro[4] = rs.getString("Login");
+                Registro[5] = rs.getString("Password");
+                Registro[6] = rs.getString("Estado");
+
+
+                TotalRegistro = TotalRegistro + 1;
+                Modelo.addRow(Registro);
+            }
+            return Modelo;
+        } catch (Exception e) {
+            JOptionPane.showConfirmDialog(null, e);
+        }
+        return null;
+
+    }
+    
     
 }
