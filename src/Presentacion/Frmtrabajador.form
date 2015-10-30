@@ -198,7 +198,7 @@
                       <Component id="jLabel14" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="cboEstado" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace pref="30" max="32767" attributes="0"/>
+                  <EmptySpace max="32767" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Component id="btnNuevo" alignment="0" min="-2" pref="41" max="-2" attributes="0"/>
                       <Group type="103" alignment="0" groupAlignment="3" attributes="0">
@@ -483,7 +483,7 @@
                           <Component id="btnSalir" min="-2" max="-2" attributes="0"/>
                       </Group>
                   </Group>
-                  <EmptySpace pref="143" max="32767" attributes="0"/>
+                  <EmptySpace pref="127" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>

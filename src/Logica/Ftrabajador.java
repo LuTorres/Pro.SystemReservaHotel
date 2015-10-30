@@ -76,8 +76,8 @@ public class Ftrabajador {
         sSQL = "insert into persona(Nombre,Apellidos,Tipo_Documento,Num_Documento,Direccion,Telefono,Email )"
                 + "values (?,?,?,?,?,?,?)";
 
-        sSQL = "insert into trabajador (IdPersona,Sueldo,Acceso,Login,Password,Estado)"
-                + "values (select IdPersona from Persona order by IdPersona des limit 1),?,?,?,?,?)";
+        sSQL2 = "insert into trabajador (IdPersona,Sueldo,Acceso,Login,Password,Estado)"
+                + "values ((select IdPersona from Persona order by IdPersona desc limit 1),?,?,?,?,?)";
 
         try {
 
