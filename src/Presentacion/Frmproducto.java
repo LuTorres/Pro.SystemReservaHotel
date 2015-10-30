@@ -457,7 +457,7 @@ private String accion = "Guardar";
         dts.setUnidad_Medida((String) cboUnidad_Medida.getItemAt(Seleccionado));
 
         
-        if (accion.equals("Guardar ")) {
+        if (accion.equals("Guardar")) {
             if (fun.insertar(dts)) {
                 JOptionPane.showConfirmDialog(rootPane,"EL PRODUCTO FUE REGISTRAD0 SATISFACTORIAMENTE");
                 mostrar("");

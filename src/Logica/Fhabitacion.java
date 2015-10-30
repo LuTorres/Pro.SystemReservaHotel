@@ -32,7 +32,7 @@ public class Fhabitacion {
         TotalRegistro=0;
         Modelo = new DefaultTableModel(null, titulos);
         
-        sSQL = "select * from habitacion where Piso like  '%" + Buscar + "%' order by IdHabitacion";
+        sSQL = "select * from habitacion where Piso like  '%" + Buscar + "%'  order by IdHabitacion";
           
            
          try {
@@ -62,7 +62,7 @@ public class Fhabitacion {
      }
     
      public boolean insertar (Vhabitacion dts){
-       sSQL="insert into Habitacion(Numero,Piso,Descripcion,Caracteristica,Precio_Diario,Estado,Tipo_Habitacion)" +
+       sSQL="insert into Habitacion(Numero,Piso,Descripcion,Caracteristicas,Precio_Diario,Estado,Tipo_Habitacion)" +
           "values (?,?,?,?,?,?,?)" ;    
          try {
            
@@ -138,4 +138,44 @@ public class Fhabitacion {
         return false;
   
      } 
+       
+       public DefaultTableModel mostrarvista(String Buscar){
+         DefaultTableModel Modelo;
+      
+        
+        String[]titulos = {"ID","Numero","Piso","Descripcion","Caracteristicas","Precio","Estado","Tipo_Habitacion"};
+         
+        String [] Registro = new String [8];
+        
+        TotalRegistro=0;
+        Modelo = new DefaultTableModel(null, titulos);
+        
+        sSQL = "select * from habitacion where Piso like  '%" + Buscar + "%'  order by IdHabitacion";
+          
+           
+         try {
+             
+             Statement st = cn.createStatement();
+             ResultSet rs=st.executeQuery(sSQL);
+              
+             while (rs.next()) {                 
+                 Registro [0]=rs.getString("IdHabitacion");
+                 Registro [1]=rs.getString("Numero");
+                 Registro [2]=rs.getString("Piso");
+                 Registro [3]=rs.getString("Descripcion");
+                 Registro [4]=rs.getString("Caracteristicas");
+                 Registro [5]=rs.getString("Precio_Diario");
+                 Registro [6]=rs.getString("Estado");
+                 Registro [7]=rs.getString("Tipo_Habitacion");
+                 
+                 TotalRegistro=TotalRegistro+1;
+                 Modelo.addRow(Registro );
+             }   
+             return  Modelo;
+         } catch (Exception e) {
+             JOptionPane.showConfirmDialog(null, e);
+         }
+        return null;
+    
+     }
 }

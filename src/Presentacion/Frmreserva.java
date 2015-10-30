@@ -16,7 +16,7 @@ import javax.swing.table.DefaultTableModel;
  *
  * @author Luis Torres Patiño
  */
-public class Frmreserva extends javax.swing.JFrame {
+public class Frmreserva extends javax.swing.JInternalFrame {
 
     /**
      * Creates new form Frmreserva
@@ -299,8 +299,18 @@ public class Frmreserva extends javax.swing.JFrame {
         });
 
         btnBuscaHabitacion.setText("...");
+        btnBuscaHabitacion.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnBuscaHabitacionActionPerformed(evt);
+            }
+        });
 
         btnBuscaCliente.setText("...");
+        btnBuscaCliente.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnBuscaClienteActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -391,10 +401,11 @@ public class Frmreserva extends javax.swing.JFrame {
                         .addComponent(txtCliente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(btnBuscaCliente)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel4)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(txtIdTrabajador, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtTrabajador, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jLabel4)
+                        .addComponent(txtTrabajador, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(cboTipo_Reserva, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -744,6 +755,20 @@ public class Frmreserva extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_cboEstadoActionPerformed
 
+    private void btnBuscaHabitacionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBuscaHabitacionActionPerformed
+        // TODO add your handling code here:
+        Frmvistahabitacion form = new Frmvistahabitacion();
+        form.toFront();
+        form.setVisible(true);
+    }//GEN-LAST:event_btnBuscaHabitacionActionPerformed
+
+    private void btnBuscaClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBuscaClienteActionPerformed
+         Frmvistacliente form = new Frmvistacliente();
+        form.toFront();
+        form.setVisible(true);
+        
+    }//GEN-LAST:event_btnBuscaClienteActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -809,13 +834,13 @@ public class Frmreserva extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JLabel lblTotalRegistros;
     private javax.swing.JTextField txtBuscar;
-    private javax.swing.JTextField txtCliente;
+    public static javax.swing.JTextField txtCliente;
     private javax.swing.JTextField txtCosto_Alojamiento;
-    private javax.swing.JTextField txtIdCliente;
-    private javax.swing.JTextField txtIdHabitacion;
+    public static javax.swing.JTextField txtIdCliente;
+    public static javax.swing.JTextField txtIdHabitacion;
     private javax.swing.JTextField txtIdReserva;
-    private javax.swing.JTextField txtIdTrabajador;
-    private javax.swing.JTextField txtNumero;
-    private javax.swing.JTextField txtTrabajador;
+    public static javax.swing.JTextField txtIdTrabajador;
+    public static javax.swing.JTextField txtNumero;
+    public static javax.swing.JTextField txtTrabajador;
     // End of variables declaration//GEN-END:variables
 }

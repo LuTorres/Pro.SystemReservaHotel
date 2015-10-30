@@ -4,8 +4,7 @@
  */
 package Logica;
 
-import Datos.Vhabitacion;
-import Datos.Vproducto;
+
 import Datos.Vreserva;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -41,9 +40,9 @@ public class Freserva {
         sSQL = "select r.IdReserva,r.IdHabitacion,h.Numero,r.IdCliente,"+
                 "(select Nombre from persona where IdPersona=r.IdCliente)as Cliente,"+
                  "(select Apellidos from persona where IdPersona=r.IdCliente) as ClienteAp,"+
-                "r,IdTrabajador,(select Nombre from persona where IdPersona=r.IdTrabajador)as Trabajadorn,"+
+                "r.IdTrabajador,(select Nombre from persona where IdPersona=r.IdTrabajador)as Trabajadorn,"+
                 "r.Tipo_Reserva,r.Fecha_Reserva,r.Fecha_Ingresa,r.Fecha_Salida,"+
-                "r.Costo_Alojamiento,r.Estado from reserva r inner join Habitacion h on r.IdHabitacion=h where r.Fecha_Reserva like'%" + Buscar + "%' order by IdReserva desc ";
+                "r.Costo_Alojamiento,r.Estado from reserva r inner join Habitacion h on r.IdHabitacion=h.IdHabitacion where r.Fecha_Reserva like'%" + Buscar + "%' order by IdReserva desc ";
           
            
          try {

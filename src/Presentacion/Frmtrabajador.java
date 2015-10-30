@@ -628,7 +628,7 @@ public class Frmtrabajador extends javax.swing.JInternalFrame {
         dts.setEstado((String)cboEstado.getItemAt(Seleccionado));
         
    
-        if (accion.equals("Guardar ")) {
+        if (accion.equals("Guardar")) {
             if (fun.insertar(dts)) {
                 JOptionPane.showConfirmDialog(rootPane,"EL TRABAJADOR FUE REGISTRAD0 SATISFACTORIAMENTE");
                 mostrar("");

@@ -544,7 +544,7 @@ public class Frmcliente extends javax.swing.JInternalFrame {
         dts.setEmail(txtEmail.getText());
         dts.setCodigo_Cliente(txtCodigo_Cliente.getText());
    
-        if (accion.equals("Guardar ")) {
+        if (accion.equals("Guardar")) {
             if (fun.insertar(dts)) {
                 JOptionPane.showConfirmDialog(rootPane,"EL CLIENTE FUE REGISTRAD0 SATISFACTORIAMENTE");
                 mostrar("");

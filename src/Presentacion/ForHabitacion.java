@@ -451,14 +451,14 @@ public class ForHabitacion extends javax.swing.JInternalFrame  {
     }//GEN-LAST:event_btnNuevoActionPerformed
 
     private void btnGuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuardarActionPerformed
-        if (txtNumero.getText().length() == 0) {
+        if (txtNumero.getText().length()== 0) {
             JOptionPane.showConfirmDialog(rootPane, "Debes Ingresar Un Numero De Habitacion");
             txtNumero.requestFocus();
 
             return;
 
         }
-        if (txtDescripcion.getText().length() == 0) {
+        if (txtDescripcion.getText().length()== 0) {
             JOptionPane.showConfirmDialog(rootPane, "Debes Ingresar Una Descripcion Para La Habitacion");
             txtDescripcion.requestFocus();
 
@@ -466,14 +466,14 @@ public class ForHabitacion extends javax.swing.JInternalFrame  {
 
         }
 
-        if (txtPrecioDiario.getText().length() == 0) {
+        if (txtPrecioDiario.getText().length()== 0) {
             JOptionPane.showConfirmDialog(rootPane, "Debes Ingresar Un Precio Diario Para La Habitacion");
             txtPrecioDiario.requestFocus();
 
             return;
 
         }
-        if (txtCaracteristica.getText().length() == 0) {
+        if (txtCaracteristica.getText().length()== 0) {
             JOptionPane.showConfirmDialog(rootPane, "Debes Ingresar Una Careristica Para La Habitacion");
             txtCaracteristica.requestFocus();
 
@@ -481,7 +481,7 @@ public class ForHabitacion extends javax.swing.JInternalFrame  {
 
         }
         Vhabitacion dts = new Vhabitacion();
-        Fhabitacion fun = new Fhabitacion();
+        Fhabitacion func=new Fhabitacion();
         dts.setNumero(txtNumero.getText());
 
         int Seleccionado = cboPiso.getSelectedIndex();
@@ -498,8 +498,8 @@ public class ForHabitacion extends javax.swing.JInternalFrame  {
          Seleccionado = cboTipoHabitaciones.getSelectedIndex();
         dts.setTipo_Habitacion((String) cboTipoHabitaciones.getItemAt(Seleccionado));
         
-        if (accion.equals("Guardar ")) {
-            if (fun.insertar(dts)) {
+        if (accion.equals("Guardar")) {
+            if (func.insertar(dts)) {
                 JOptionPane.showConfirmDialog(rootPane,"LA HABITACION FUE REGISTRADA SATISFACTORIAMENTE");
                 mostrar("");
                 inhabilitar();
@@ -510,7 +510,7 @@ public class ForHabitacion extends javax.swing.JInternalFrame  {
         else if(accion.equals("Editar") ){
             dts.setIdHabhitacion(Integer.parseInt(txtIdHabitacion.getText()));
             
-            if (fun.editar(dts)) {
+            if (func.editar(dts)) {
                 JOptionPane.showMessageDialog(rootPane,"La Habitacion Fue Editada Satisfactoriamente"   );
             mostrar("");
             inhabilitar();

@@ -116,6 +116,11 @@ public class Frminicio extends javax.swing.JFrame {
         contentMenuItem.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Files/1445935934_phone.png"))); // NOI18N
         contentMenuItem.setMnemonic('c');
         contentMenuItem.setText("Reserva y Consumos");
+        contentMenuItem.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                contentMenuItemActionPerformed(evt);
+            }
+        });
         mnureserva.add(contentMenuItem);
 
         aboutMenuItem.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_C, java.awt.event.InputEvent.CTRL_MASK));
@@ -233,6 +238,18 @@ public class Frminicio extends javax.swing.JFrame {
         // TODO add your handling code here:
         this.dispose();
     }//GEN-LAST:event_mnusalirMouseClicked
+
+    private void contentMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_contentMenuItemActionPerformed
+          // TODO add your handling code here:
+        Frmreserva form = new Frmreserva();
+        Escritorio.add(form);
+        form.toFront();
+        form.setVisible(true);
+        Frmreserva.txtIdTrabajador.setText(lblIdPersona.getText());
+        Frmreserva.txtIdTrabajador.setText(lblNombre.getText() + " " + lblApellidos.getText());
+        Frmreserva.IdUsuario=Integer.parseInt(lblIdPersona.getText());
+        
+    }//GEN-LAST:event_contentMenuItemActionPerformed
 
     /**
      * @param args the command line arguments

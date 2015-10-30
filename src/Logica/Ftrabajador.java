@@ -223,9 +223,9 @@ public class Ftrabajador {
         TotalRegistro = 0;
         Modelo = new DefaultTableModel(null, titulos);
  
-        sSQL = "select p.IdPersona, p.Nombre, p.Apellidos,t.Acceso, t.Login, t.Password, t.Estado from persona inner join trabajador t "
+        sSQL = "select p.IdPersona, p.Nombre, p.Apellidos,t.Acceso, t.Login, t.Password, t.Estado from persona p inner join trabajador t "
                 + "on p.IdPersona=t.IdPersona where t.Login= '"
-                + Login + "' and t.Password '" + Password + "' and t.Estado='A'";
+                + Login + "' and t.Password='" + Password + "' and t.Estado='A'";
 
         try {
 
