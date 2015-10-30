@@ -36,9 +36,9 @@ public class Ftrabajador {
         TotalRegistro = 0;
         Modelo = new DefaultTableModel(null, titulos);
  
-        sSQL = "select p.IdPersona, p.Nombre, p.Apellidos, p.Tipo_Documento, p.Num_Documento"
-                + "p.Direccion, p.Telefono, p.Email, t.Sueldo, t.Acceso, t.Login, t.Password, t.Estado from persona inner join trabajador t "
-                + "on p.IdPersona=t.IdPersona where Num_Documento like '%" + Buscar + "%' order by IdPersona desc ";
+        sSQL = "select p.IdPersona, p.Nombre, p.Apellidos, p.Tipo_Documento, p.Num_Documento,"
+                + "p.Direccion, p.Telefono, p.Email, t.Sueldo, t.Acceso, t.Login, t.Password, t.Estado from persona p inner join trabajador t "
+                + "on p.IdPersona=t.IdPersona where Num_Documento like '%" + Buscar + "%' order by p.IdPersona desc ";
 
         try {
 

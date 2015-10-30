@@ -35,9 +35,9 @@ public class Fcliente {
         TotalRegistro = 0;
         Modelo = new DefaultTableModel(null, titulos);
 
-        sSQL = "select p.IdPersona, p.Nombre, p.Apellidos, p.Tipo_Documento, p.Num_Documento"
-                + "p.Direccion, p.Telefono, p.Email, c.Codigo_Cliente from persona inner join cliente c "
-                + "on p.IdPersona=c.IdPersona where Num_Documento like  '%" + Buscar + "%' order by IdPersona desc ";
+        sSQL = "select p.IdPersona, p.Nombre, p.Apellidos, p.Tipo_Documento, p.Num_Documento,"
+                + "p.Direccion, p.Telefono, p.Email, c.Codigo_Cliente from persona p inner join cliente c "
+                + "on p.IdPersona=c.IdPersona where Num_Documento like  '%" + Buscar + "%' order by p.IdPersona desc ";
 
         try {
 
@@ -71,8 +71,8 @@ public class Fcliente {
         sSQL = "insert into persona(Nombre,Apellidos,Tipo_Documento,Num_Documento,Direccion,Telefono,Email )"
                 + "values (?,?,?,?,?,?,?)";
 
-        sSQL = "insert into cliente(IdPersona,Codigo_Cliente)"
-                + "values (select IdPersona from Persona order by IdPersona des limit 1),?)";
+        sSQL2 = "insert into cliente(IdPersona,Codigo_Cliente)"
+                + "values ((select IdPersona from Persona order by IdPersona desc limit 1),?)";
 
         try {
 
