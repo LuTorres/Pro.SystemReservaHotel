@@ -428,7 +428,7 @@ private String accion = "Guardar";
 
         }
         if (txtDescripcion.getText().length() == 0) {
-            JOptionPane.showConfirmDialog(rootPane, "Debes Ingresar Una Descripcion Para La Habitacion");
+            JOptionPane.showConfirmDialog(rootPane, "Debes Ingresar Una Descripcion Del Producto");
             txtDescripcion.requestFocus();
 
             return;
