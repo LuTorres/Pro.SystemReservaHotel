@@ -121,6 +121,60 @@ public class Fhabitacion {
   
      }
     
+      public boolean desocupar (Vhabitacion dts){
+         sSQL=" update Habitacion set Estado='Disponible'"+
+          " where IdHabitacion=?";      
+         
+         //alt + 39
+                 
+          try {
+              PreparedStatement pst=cn.prepareStatement(sSQL); 
+            
+             
+             pst.setInt( 1, dts.getIdHabhitacion());
+              
+             int n=pst.executeUpdate();
+             if (n!=0){
+                 return true;
+               } 
+             else{
+                 return false;
+             }
+         } catch (Exception e) {
+             JOptionPane.showConfirmDialog(null, e);
+            return false;
+         }
+   
+     }
+      
+      public boolean ocupar (Vhabitacion dts){
+         sSQL=" update Habitacion set Estado='Ocupado'"+
+          " where IdHabitacion=?";      
+         
+         //alt + 39
+                 
+          try {
+              PreparedStatement pst=cn.prepareStatement(sSQL); 
+            
+             
+             pst.setInt( 1, dts.getIdHabhitacion());
+              
+             int n=pst.executeUpdate();
+             if (n!=0){
+                 return true;
+               } 
+             else{
+                 return false;
+             }
+         } catch (Exception e) {
+             JOptionPane.showConfirmDialog(null, e);
+            return false;
+         }
+   
+     }
+      
+      
+      
        public boolean eliminar (Vhabitacion dts){
         sSQL="delete from habitacion where IdHabitacion=?";
            try {

@@ -27,6 +27,7 @@ public class Frmconsumo extends javax.swing.JInternalFrame  {
         txtCliente.setText(Cliente);
         txtIdReserva.setText(IdReserva);
         inhabilitar();
+        
        
     }
     private String accion = "Guardar";
@@ -382,7 +383,7 @@ public class Frmconsumo extends javax.swing.JInternalFrame  {
 
         lblTotalRegistros.setText("Registros");
 
-        lblConsumo.setText("Consumo Tota $l ");
+        lblConsumo.setText("Consumo Tota $: ");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
