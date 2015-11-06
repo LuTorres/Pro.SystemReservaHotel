@@ -13,6 +13,7 @@ import Logica.Fconsumo;
 import Logica.Fhabitacion;
 import Logica.Fpago;
 import Logica.Fproducto;
+import Logica.Freserva;
 import com.sun.org.apache.bcel.internal.generic.FCMPG;
 import java.sql.Date;
 import java.util.Calendar;
@@ -38,7 +39,7 @@ public class Frmpago extends javax.swing.JInternalFrame {
         txtIdHabitacion.setText(IdHabitacion);
         txtTotalReserva.setText(Double.toString(TotalReserva ));
         
-        Frmconsumo func = new Frmconsumo();
+        Fpago func = new Fpago();
         func.mostrar(IdReserva);
         
         txtTotal_Pago.setText(Double.toString(TotalReserva + func.TotalConsumo));
@@ -654,7 +655,7 @@ public class Frmpago extends javax.swing.JInternalFrame {
                 func2.desocupar(dts2);
                 
                 // Cancelar o pagar la reserva
-               Frmreserva func3 = new Frmreserva();
+               Freserva func3 = new Freserva();
                 Vreserva dts3 = new Vreserva();
                 
                 dts3.setIdReserva(Integer.parseInt(txtIdReserva.getText()));
