@@ -39,7 +39,7 @@ public class Fpago {
         TotalRegistro=0;
         Modelo = new DefaultTableModel(null, titulos);
         
-        sSQL = "select * from pago where IdReserva=" + Buscar + " order by IdPago desc ";
+        sSQL = "select * from pago where IdReserva=" + Buscar + " order by IdPago desc";
           
            
          try {

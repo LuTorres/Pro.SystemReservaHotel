@@ -39,7 +39,7 @@ public class Frmpago extends javax.swing.JInternalFrame {
         txtIdHabitacion.setText(IdHabitacion);
         txtTotalReserva.setText(Double.toString(TotalReserva ));
         
-        Fpago func = new Fpago();
+        Fconsumo func = new Fconsumo();
         func.mostrar(IdReserva);
         
         txtTotal_Pago.setText(Double.toString(TotalReserva + func.TotalConsumo));
@@ -135,19 +135,19 @@ public class Frmpago extends javax.swing.JInternalFrame {
     void mostrar(String buscar) {
 
         try {
-            DefaultTableModel Modelo;
+            DefaultTableModel modelo;
             Fpago func = new Fpago();
-            Modelo = func.mostrar(buscar);
+            modelo = func.mostrar(buscar);
 
-            TablaListadoConsumo.setModel(Modelo);
+            TablaListado.setModel(modelo);
             ocultar_columnas();
             lblTotalRegistrosConsumo.setText("Total Pagos" + Integer.toString(func.TotalRegistro));
             
             //Mostrar los datos de los consumos.....
             
             Fconsumo func2 = new Fconsumo();
-            Modelo= func2.mostrar(buscar);
-            TablaListadoConsumo.setModel(Modelo);
+            modelo= func2.mostrar(buscar);
+            TablaListadoConsumo.setModel(modelo);
             ocultar_columnasconsumo();
             
             lblTotalRegistrosConsumo.setText("Total Consumo" + func2.TotalRegistro);
@@ -209,7 +209,7 @@ public class Frmpago extends javax.swing.JInternalFrame {
         btnSalir1 = new javax.swing.JButton();
         lblTotalRegistros1 = new javax.swing.JLabel();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel1.setText("Pagos ..");
@@ -441,7 +441,7 @@ public class Frmpago extends javax.swing.JInternalFrame {
 
         lblTotalRegistrosConsumo.setText("Registros");
 
-        lblTotalConsumo.setText("jLabel5");
+        lblTotalConsumo.setText("Total Consumo");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -569,7 +569,7 @@ public class Frmpago extends javax.swing.JInternalFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(27, Short.MAX_VALUE))
         );
 
         pack();

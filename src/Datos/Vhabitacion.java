@@ -9,7 +9,7 @@ package Datos;
  * @author Luis Torres Patiño
  */
 public class Vhabitacion {
-    private int IdHabhitacion;
+    private int IdHabitacion;
     private String Numero;
     private String Piso;
     private String Descripcion;
@@ -18,8 +18,8 @@ public class Vhabitacion {
     private String Estado;
     private String Tipo_Habitacion;
 
-    public Vhabitacion(int IdHabhitacion, String Numero, String Piso, String Descripcion, String Caracteristicas, String Estado, String Tipo_Habitacion) {
-        this.IdHabhitacion = IdHabhitacion;
+    public Vhabitacion(int IdHabitacion, String Numero, String Piso, String Descripcion, String Caracteristicas, String Estado, String Tipo_Habitacion) {
+        this.IdHabitacion = IdHabitacion;
         this.Numero = Numero;
         this.Piso = Piso;
         this.Descripcion = Descripcion;
@@ -31,12 +31,12 @@ public class Vhabitacion {
     public Vhabitacion() {
     }
 
-    public int getIdHabhitacion() {
-        return IdHabhitacion;
+    public int getIdHabitacion() {
+        return IdHabitacion;
     }
 
     public void setIdHabhitacion(int IdHabhitacion) {
-        this.IdHabhitacion = IdHabhitacion;
+        this.IdHabitacion = IdHabhitacion;
     }
 
     public String getNumero() {

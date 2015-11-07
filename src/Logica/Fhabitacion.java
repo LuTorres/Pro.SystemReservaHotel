@@ -103,7 +103,7 @@ public class Fhabitacion {
              pst.setDouble( 5, dts.getPrecio_Diario());
              pst.setString( 6, dts.getEstado());
              pst.setString( 7, dts.getTipo_Habitacion());
-             pst.setInt( 8, dts.getIdHabhitacion());
+             pst.setInt( 8, dts.getIdHabitacion());
               
              int n=pst.executeUpdate();
              if (n!=0){
@@ -131,7 +131,7 @@ public class Fhabitacion {
               PreparedStatement pst=cn.prepareStatement(sSQL); 
             
              
-             pst.setInt( 1, dts.getIdHabhitacion());
+             pst.setInt( 1, dts.getIdHabitacion());
               
              int n=pst.executeUpdate();
              if (n!=0){
@@ -157,7 +157,7 @@ public class Fhabitacion {
               PreparedStatement pst=cn.prepareStatement(sSQL); 
             
              
-             pst.setInt( 1, dts.getIdHabhitacion());
+             pst.setInt( 1, dts.getIdHabitacion());
               
              int n=pst.executeUpdate();
              if (n!=0){
@@ -180,7 +180,7 @@ public class Fhabitacion {
            try {
              PreparedStatement pst=cn.prepareStatement(sSQL); 
              
-             pst.setInt( 1, dts.getIdHabhitacion());
+             pst.setInt( 1, dts.getIdHabitacion());
               
              int n=pst.executeUpdate();
              if (n!=0){

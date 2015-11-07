@@ -430,7 +430,7 @@ public class Frmreserva extends javax.swing.JInternalFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txtCosto_Alojamiento, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel6))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 28, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 32, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(cboEstado, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel11))
@@ -660,7 +660,7 @@ public class Frmreserva extends javax.swing.JInternalFrame {
         cal=dcFecha_Reserva.getCalendar();
         d=cal.get(Calendar.DAY_OF_MONTH);
          m=cal.get(Calendar.MONDAY);
-          a=cal.get(Calendar.YEAR ) - 19000;
+          a=cal.get(Calendar.YEAR ) - 1900;
           dts.setFecha_Reserva(new Date(a,m,d));
           
           
@@ -819,6 +819,7 @@ public class Frmreserva extends javax.swing.JInternalFrame {
 
     private void btnRealizarpagoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRealizarpagoActionPerformed
         // TODO add your handling code here:
+        
         int fila = TablaListado.getSelectedRow();
         
         Frmpago.IdReserva = TablaListado.getValueAt(fila, 0).toString();

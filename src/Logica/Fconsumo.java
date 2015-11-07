@@ -40,9 +40,9 @@ public class Fconsumo {
         TotalConsumo=0.0;
         Modelo = new DefaultTableModel(null, titulos);
         
-        sSQL = "select c.IdConsumo,c.IdReserva,c.IdProducto,p.Nombre,c.Cantidad,c.Precio_Venta "
+        sSQL = "select c.IdConsumo,c.IdReserva,c.IdProducto,p.Nombre,c.Cantidad,c.Precio_Venta, "
                 + " c.Estado from consumo c inner join producto p on c.IdProducto=p.IdProducto" 
-                + " where c.IdReserva ="+ Buscar + " order by IdConsumo desc ";
+                + " where c.IdReserva ="+ Buscar +" order by c.IdConsumo desc";
           
            
          try {
@@ -55,7 +55,7 @@ public class Fconsumo {
                  Registro [1]=rs.getString("IdReserva");
                  Registro [2]=rs.getString("IdProducto");
                  Registro [3]=rs.getString("Nombre");
-                 Registro [4]=rs.getString("Cantidad ");
+                 Registro [4]=rs.getString("Cantidad");
                  Registro [5]=rs.getString("Precio_Venta");
                  Registro [6]=rs.getString("Estado");
                  
